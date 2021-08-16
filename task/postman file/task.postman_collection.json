@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "141159da-e7db-4f0f-8961-935801c0727b",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "store data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/store?name=test post man with token3&authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC90YXNrXC9sb2dpbiIsImlhdCI6MTYyOTE1MTA2NCwiZXhwIjoxNjI5MTU0NjY0LCJuYmYiOjE2MjkxNTEwNjQsImp0aSI6Ik16UUY4R1NBcUJTclFVb3giLCJzdWIiOjgzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gzSGXyrRq36ZMyHaAzKcaRGkV5_M3hX6zBRr3YimEVs",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"store"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test post man with token3"
+						},
+						{
+							"key": "authToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC90YXNrXC9sb2dpbiIsImlhdCI6MTYyOTE1MTA2NCwiZXhwIjoxNjI5MTU0NjY0LCJuYmYiOjE2MjkxNTEwNjQsImp0aSI6Ik16UUY4R1NBcUJTclFVb3giLCJzdWIiOjgzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gzSGXyrRq36ZMyHaAzKcaRGkV5_M3hX6zBRr3YimEVs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/login?email=eslamelbanna02@gmail.com&password=123456789",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "eslamelbanna02@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/task/logout?authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC90YXNrXC9sb2dpbiIsImlhdCI6MTYyOTE1MTA2NCwiZXhwIjoxNjI5MTU0NjY0LCJuYmYiOjE2MjkxNTEwNjQsImp0aSI6Ik16UUY4R1NBcUJTclFVb3giLCJzdWIiOjgzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gzSGXyrRq36ZMyHaAzKcaRGkV5_M3hX6zBRr3YimEVs",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "authToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC90YXNrXC9sb2dpbiIsImlhdCI6MTYyOTE1MTA2NCwiZXhwIjoxNjI5MTU0NjY0LCJuYmYiOjE2MjkxNTEwNjQsImp0aSI6Ik16UUY4R1NBcUJTclFVb3giLCJzdWIiOjgzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gzSGXyrRq36ZMyHaAzKcaRGkV5_M3hX6zBRr3YimEVs"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

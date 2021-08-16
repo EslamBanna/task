@@ -19,6 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group (['prefix' => 'task'],function(){
+
     Route::get('/',[Task::class, 'index'])->name('index');
-    Route::post('/store',[Task::class, 'store'])->name('store');
+    Route::post('/login',[Task::class,'login']);
+
+    Route::group(['middleware' => 'checkAuth:user-api'],function(){
+        Route::post('/store',[Task::class, 'store']);
+        Route::post('/logout',[Task::class, 'logout']);
+
+    });
+
 });
