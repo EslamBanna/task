@@ -13,13 +13,42 @@ use JWTAuth;
 class Task extends Controller
 {
     use GeneralTrait;
-    public function index()
+
+
+    ####### start first task ######################
+
+    public function getAllUsers()
     {
-        try{
         $users = userList::get();
         return response()->json($users);
-        // return view('layouts.task',compact('users'));
-        }catch(\Exception $e){
+        // return view('layouts.task', compact('users'));
+    }
+
+    public function storeUser(Request $request)
+    {
+        try {
+            userList::create([
+                'name' => $request->name
+            ]);
+
+            return response()->json(['msg' => 'addedd successfully']);
+        } catch (\Exception $e) {
+            return response()->json(['errMsg' => 'some thing went wrong']);
+        }
+    }
+    ####### end first task ######################
+
+
+
+
+    ####### start second task ######################
+    public function index()
+    {
+        try {
+            $users = userList::get();
+            return response()->json($users);
+            // return view('layouts.task',compact('users'));
+        } catch (\Exception $e) {
             return $this->returnError($e->getCode(), $e->getMessage());
         }
     }
@@ -78,4 +107,6 @@ class Task extends Controller
             return response()->json(['errMsg' => 'some thing went wrong']);
         }
     }
+    ####### end second task ######################
+
 }

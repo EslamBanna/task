@@ -13,7 +13,7 @@
             var name = document.getElementById('name').value;
             $.ajax({
                 type: 'POST',
-                url: "http://127.0.0.1:8000/api/task/store",
+                url: "http://127.0.0.1:8000/api/firstTask/store",
                 data: {
                     'name': name
                 },
@@ -63,7 +63,7 @@
         function getData() {
             $.ajax({
                 type: 'GET',
-                url: "http://127.0.0.1:8000/api/task",
+                url: "http://127.0.0.1:8000/api/firstTask",
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
