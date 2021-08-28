@@ -30,6 +30,8 @@ Route::group(['prefix' => 'firstTask'], function () {
 
 ######## seconde task using api and authinticated in insert data to user_list table
 
+//http://127.0.0.1:8000/api/Secondtask/
+
 Route::group(['prefix' => 'Secondtask'], function () {
 
     Route::get('/', [Task::class, 'index'])->name('index');
